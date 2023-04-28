@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="Current" Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Terradue.Tep.Test</RootNamespace>
+    <AssemblyName>Terradue.Tep.Test</AssemblyName>
+    <TargetFrameworks>net472</TargetFrameworks>
+    <RuntimeIdentifiers>win;linux</RuntimeIdentifiers>
+    <IsPackable>false</IsPackable>
+    <RestorePackagesPath>$(SolutionDir)\packages</RestorePackagesPath>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System"/>
+    <Reference Include="System.Xml"/>
+    <Reference Include="System.Net"/>
+    <Reference Include="System.Web"/>
+    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Core"/>
+    <PackageReference Include="NUnit" Version="3.13.2"/>
+    <PackageReference Include="Terradue.Portal" Version="2.9.2"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Terradue.Tep\Terradue.Tep.csproj"/>
+    <Reference Include="../packages/terradue.portal/**/lib/net472/Terradue.Portal.AdminTool.exe"/>
+  </ItemGroup>
+</Project>
